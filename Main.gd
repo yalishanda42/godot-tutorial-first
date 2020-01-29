@@ -7,9 +7,6 @@ var score
 func _ready():
 	randomize()
 
-#func _process(delta):
-#	pass
-
 
 func game_over():
 	$ScoreTimer.stop()
@@ -38,7 +35,7 @@ func _on_StartTimer_timeout():
 func _on_MobTimer_timeout():
 	$MobPath/MobSpawnLocation.offset = randi()
 	
-	var mob = Mob.Instance()
+	var mob = Mob.instance()
 	add_child(mob)
 	
 	mob.position = $MobPath/MobSpawnLocation.position
@@ -49,8 +46,3 @@ func _on_MobTimer_timeout():
 	
 	var velocity = Vector2(rand_range(mob.min_speed, mob.max_speed), 0)
 	mob.linear_velocity = velocity.rotated(direction)
-	
-	
-	
-	
-	

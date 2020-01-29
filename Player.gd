@@ -10,9 +10,11 @@ func start(pos):
 	show()
 	$CollisionShape2D.disabled = false
 
+
 func _ready():
 	screen_size = get_viewport_rect().size
 	hide()
+
 
 func _process(delta):
 	var velocity = Vector2()

@@ -33,7 +33,7 @@ curve = SubResource( 1 )
 
 [node name="MobSpawnLocation" type="PathFollow2D" parent="MobPath"]
 position = Vector2( 1.43213, 1.1993 )
-rotation = -0.00406505
+rotation = -0.00406502
 
 [node name="HUD" parent="." instance=ExtResource( 4 )]
 [connection signal="hit" from="Player" to="." method="game_over"]
